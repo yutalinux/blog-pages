@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+/* 参考: https://zenn.dev/web_tips/articles/f1167f4314dcb3 */
+
+/* --- テンプレート --- */
+/* 視覚整形モデル */
+/* ボックスモデル */
+/* 色 */
+/* フォント */
+/* 表 */
+/* UI */
+/* アニメーション */
+/* その他 */
+
+* {
+  /* 視覚整形モデル */
+  @apply relative z-[5];
+}
+
+body {
+  /* 色 */
+  @apply bg-neutral-950;
+}
+
+main {
+  /* 視覚整形モデル */
+  @apply flex flex-col gap-6;
+
+  /* ボックスモデル */
+  @apply mx-auto py-4 max-w-[800px] w-full;
+
+  /* 色 */
+  @apply bg-neutral-950;
+}
+
+article {
+  /* 視覚整形モデル */
+  @apply z-[1];
+
+  /* ボックスモデル */
+  @apply px-6 py-2 rounded-lg;
+
+  /* 色 */
+  @apply bg-zinc-900;
+}
+
+.blog-article {
+  * {
+    /* 色 */
+    @apply text-neutral-200;
+
+    /* フォント */
+    @apply text-base;
+    font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "游ゴシック", sans-serif;
+  }
+
+  a {
+    /* 色 */
+    @apply text-emerald-600;
+
+    /* アニメーション */
+    @apply transition-colors duration-200;
+
+    &:hover {
+      /* 色 */
+      @apply text-emerald-500;
+    }
+  }
+
+  pre {
+    /* 視覚整形モデル */
+    @apply p-5 pt-11;
+
+    /* ボックスモデル */
+    @apply relative;
+  }
+
+  .copy-code {
+    /* 視覚整形モデル */
+    @apply absolute w-full;
+
+    /* ボックスモデル */
+    @apply px-1;
+
+    /* 色 */
+    @apply bg-blue-900;
+  }
+
+  ul,
+  ol {
+    /* ボックスモデル */
+    @apply pl-5;
+  }
+
+  ul li {
+    /* 視覚整形モデル */
+    @apply list-disc;
+  }
+
+  ol li {
+    /* 視覚整形モデル */
+    @apply list-decimal;
+  }
+
+  h1 {
+    /* ボックスモデル */
+    @apply my-4;
+
+    /* フォント */
+    @apply text-5xl my-4;
+  }
+
+  h2 {
+    --h2-link-fix: 48px;
+    --h2-margin: 16px;
+    --h2-padding: 4px;
+
+    /* 余白 */
+    @apply mb-[var(--h2-margin)] pb-[var(--h2-padding)] px-4;
+
+    margin-top: calc(var(--h2-link-fix) * -1);
+    padding-top: calc(
+      var(--h2-link-fix) + var(--h2-margin) + var(--h2-padding)
+    );
+
+    /* 見た目 */
+    @apply text-4xl relative z-[2];
+
+    &::before {
+      content: "C";
+      @apply block absolute;
+
+      /* 余白 */
+      top: calc(var(--h2-link-fix) + var(--h2-margin));
+      @apply py-1 px-4 left-0 right-0;
+
+      /* 見た目 */
+      @apply text-transparent bg-neutral-800 border-l-4 border-emerald-600 z-[-1];
+    }
+  }
+
+  h3 {
+    --h2-link-fix: 48px;
+    --h2-margin: 12px;
+    --h2-padding: 4px;
+
+    /* 余白 */
+    @apply mb-[var(--h2-margin)] pb-[var(--h2-padding)] px-4;
+
+    margin-top: calc(var(--h2-link-fix) * -1);
+    padding-top: calc(
+      var(--h2-link-fix) + var(--h2-margin) + var(--h2-padding)
+    );
+
+    /* 見た目 */
+    @apply text-3xl relative z-[2];
+
+    &::before {
+      content: "C";
+      @apply block absolute;
+
+      /* 余白 */
+      top: calc(var(--h2-link-fix) + var(--h2-margin));
+      @apply py-1 px-4 left-0 right-0;
+
+      /* 見た目 */
+      @apply text-transparent bg-neutral-800 border-l-4 border-emerald-600 z-[-1];
+    }
+  }
+
+  h4 {
+    --h2-link-fix: 48px;
+    --h2-margin: 12px;
+    --h2-padding: 4px;
+
+    /* 余白 */
+    @apply mb-[var(--h2-margin)] pb-[var(--h2-padding)] px-4;
+
+    margin-top: calc(var(--h2-link-fix) * -1);
+    padding-top: calc(
+      var(--h2-link-fix) + var(--h2-margin) + var(--h2-padding)
+    );
+
+    /* 見た目 */
+    @apply text-2xl relative z-[2];
+
+    &::before {
+      content: "C";
+      @apply block absolute;
+
+      /* 余白 */
+      top: calc(var(--h2-link-fix) + var(--h2-margin));
+      @apply py-1 px-4 left-0 right-0;
+
+      /* 見た目 */
+      @apply text-transparent bg-neutral-800 border-l-4 border-emerald-600 z-[-1];
+    }
+  }
+
+  blockquote {
+    @apply relative border-l-4 border-emerald-800 pl-2;
+  }
+
+  blockquote:before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    mask-image: url("/blog/format-quote.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  /* 目次 */
+  .toc {
+  }
+
+  /* トップに戻るボタン */
+  .top-button {
+    @apply fixed bottom-4 bg-neutral-200 w-10 h-10 rounded-full z-[50];
+    & img {
+      @apply w-full h-full p-2;
+    }
+  }
+}
