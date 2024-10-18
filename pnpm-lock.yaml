@@ -11,9 +11,15 @@ importers:
       '@jsdevtools/rehype-toc':
         specifier: ^3.0.2
         version: 3.0.2
+      '@types/mdast':
+        specifier: ^4.0.4
+        version: 4.0.4
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
+      mdast-util-directive:
+        specifier: ^3.0.0
+        version: 3.0.0
       rehype-autolink-headings:
         specifier: ^7.1.0
         version: 7.1.0
@@ -47,18 +53,21 @@ importers:
       remark-rehype:
         specifier: ^11.1.1
         version: 11.1.1
-      remark-slug:
-        specifier: ^8.0.0
-        version: 8.0.0
       remark-title:
         specifier: ^1.0.4
         version: 1.0.4
       remark-toc:
         specifier: ^9.0.0
         version: 9.0.0
+      to-vfile:
+        specifier: ^8.0.0
+        version: 8.0.0
       unified:
         specifier: ^11.0.5
         version: 11.0.5
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
     devDependencies:
       '@types/js-yaml':
         specifier: ^4.0.9
@@ -515,10 +524,6 @@ packages:
   remark-rehype@11.1.1:
     resolution: {integrity: sha512-g/osARvjkBXb6Wo0XvAeXQohVta8i84ACbenPpoSsxTOQH/Ae0/RGP4WZgnMH5pMLpsj4FG7OHmcIcXxpza8eQ==}
 
-  remark-slug@8.0.0:
-    resolution: {integrity: sha512-udnGz7dtf6/7h/brjh+wIPLwlVryBJbs2Y7znj5uZaIWT32VyS1myYBp+1iYMO69ujz+ZY6wWkYTNpt8hWPBDQ==}
-    deprecated: 'Deprecated: use `rehype-slug` instead'
-
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
 
@@ -539,6 +544,9 @@ packages:
 
   stringify-entities@4.0.4:
     resolution: {integrity: sha512-IwfBptatlO+QCJUo19AqvrPNqlVMpW9YEL2LIVY+Rpv2qsjCGxaDLNRgeGsQWJhfItebuJhsGSLjaBbNSQ+ieg==}
+
+  to-vfile@8.0.0:
+    resolution: {integrity: sha512-IcmH1xB5576MJc9qcfEC/m/nQCFt3fzMHz45sSlgJyTWjRbKW1HAkJpuf3DgE57YzIlZcwcBZA5ENQbBo4aLkg==}
 
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
@@ -1169,8 +1177,6 @@ snapshots:
       unified: 11.0.5
       vfile: 6.0.3
 
-  remark-slug@8.0.0: {}
-
   remark-stringify@11.0.0:
     dependencies:
       '@types/mdast': 4.0.4
@@ -1203,6 +1209,10 @@ snapshots:
     dependencies:
       character-entities-html4: 2.1.0
       character-entities-legacy: 3.0.0
+
+  to-vfile@8.0.0:
+    dependencies:
+      vfile: 6.0.3
 
   trim-lines@3.0.1: {}
 

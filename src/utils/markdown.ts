@@ -10,6 +10,7 @@ import remarkDirective from "remark-directive";
 import { remark } from "remark";
 import remarkTitle from "remark-title";
 import { load } from "js-yaml";
+import remarkNotePlugin from "./remark/note";
 
 export interface Props {
   title?: string;
@@ -19,7 +20,7 @@ export interface Props {
   tags?: string[];
 }
 
-const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
+// const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 export async function markdownToHtml(markdown: string) {
   let yaml: Props | null = null;
@@ -52,6 +53,7 @@ export async function markdownToHtml(markdown: string) {
     //   })(),
     // })
     .use(remarkDirective)
+    .use(remarkNotePlugin)
     .use(remarkToc)
     .use(remark2rehype)
     .use(rehypeSlug)

@@ -1,0 +1,47 @@
+<h1 id="スタイルチェック"><a aria-hidden="true" tabindex="-1" href="#スタイルチェック"><span class="icon icon-link"></span></a>スタイルチェック</h1>
+<p><div class="note"><p controls preload="metadata">ノート</p></div></p>
+<h2 id="フォントチェック"><a aria-hidden="true" tabindex="-1" href="#フォントチェック"><span class="icon icon-link"></span></a>フォントチェック</h2>
+<p>漢字</p>
+<p>ひらがな</p>
+<p>カタカナ</p>
+<p>ｶﾀｶﾅ</p>
+<p>Alphabet</p>
+<h2 id="強調"><a aria-hidden="true" tabindex="-1" href="#強調"><span class="icon icon-link"></span></a>強調</h2>
+<p>普通の文字</p>
+<p><strong>太文字</strong></p>
+<p><em>斜体</em></p>
+<p><strong><em>太文字 + 斜体</em></strong></p>
+<p>~~取り消し線~~</p>
+<h2 id="リンク"><a aria-hidden="true" tabindex="-1" href="#リンク"><span class="icon icon-link"></span></a>リンク</h2>
+<p><a href="https://yutalinux.github.io/blog">リンク</a></p>
+<p>https://yutalinux.github.io/blog</p>
+<p><a href="#%E3%83%AA%E3%82%B9%E3%83%88">リスト</a></p>
+<h2 id="引用"><a aria-hidden="true" tabindex="-1" href="#引用"><span class="icon icon-link"></span></a>引用</h2>
+<blockquote>
+<p>引用した文</p>
+<p>引用元: ここに引用元を書く</p>
+</blockquote>
+<h2 id="コード"><a aria-hidden="true" tabindex="-1" href="#コード"><span class="icon icon-link"></span></a>コード</h2>
+<p><code>コード</code></p>
+<pre><code class="hljs language-js"><div class="code-line numbered-code-line" data-line-number="1"><span class="hljs-keyword">let</span> x = <span class="hljs-number">0</span>;</div></code></pre>
+<h2 id="リスト"><a aria-hidden="true" tabindex="-1" href="#リスト"><span class="icon icon-link"></span></a>リスト</h2>
+<ul>
+<li>A</li>
+<li>B
+<ul>
+<li>B-1</li>
+</ul>
+</li>
+<li>C</li>
+</ul>
+<ol>
+<li>A
+<ol>
+<li>B</li>
+</ol>
+</li>
+<li>C</li>
+</ol>
+<h2 id="見出し-1"><a aria-hidden="true" tabindex="-1" href="#見出し-1"><span class="icon icon-link"></span></a>見出し 1</h2>
+<h3 id="見出し-2"><a aria-hidden="true" tabindex="-1" href="#見出し-2"><span class="icon icon-link"></span></a>見出し 2</h3>
+<h4 id="見出し-3"><a aria-hidden="true" tabindex="-1" href="#見出し-3"><span class="icon icon-link"></span></a>見出し 3</h4>
